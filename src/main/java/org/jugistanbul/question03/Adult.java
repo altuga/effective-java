@@ -1,7 +1,5 @@
 package org.jugistanbul.question03;
 
-import java.io.IOException;
-
 /**
  * Altug Bilgin Altintas
  * 
@@ -20,16 +18,11 @@ TODO:
 */
 
 public class Adult {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
 
-
-        try (Room room = new Room(10)) {
-            System.out.println("Temizlik baslayacak");
-        }
-        System.out.println("Hello");
-
-
-
+        Room room = new Room(10);
+        //Clean the room automagically
+        System.out.println(room.numJunkPiles); // clean numJunkPiles to zero
 
 
     }

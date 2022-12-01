@@ -1,10 +1,6 @@
 package org.jugistanbul.question21;
 
 
-import java.time.LocalDateTime;
-import java.time.OffsetTime;
-import java.util.Calendar;
-
 public class Calculator {
 
     public static final double MERCURY_MASS = 3.302e+23;
@@ -33,9 +29,6 @@ public class Calculator {
 
     private static double convertToMass(double wightOfPerson) {
 
-        //LocalDateTime
-        //OffsetTime
-        //Calendar
         double surfaceGravityOfEarth = G * EARTH_MASS / (EARTH_REDIUS * EARTH_REDIUS);
         return wightOfPerson / surfaceGravityOfEarth;
     }

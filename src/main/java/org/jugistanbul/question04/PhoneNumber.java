@@ -19,14 +19,6 @@ TODO:
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
-    public static final String TURKIYE_CODE = "+90";
-
-    public static List<String> getCustomerPhoneNumbers() {
-        int value = 0;
-        System.out.println("");
-        return  List.of("String");
-    }
-
     public PhoneNumber(int areaCode, int prefix, int lineNum) {
         this.areaCode = rangeCheck(areaCode, 999, "area code");
         this.prefix   = rangeCheck(prefix,   999, "prefix");
@@ -39,24 +31,22 @@ public final class PhoneNumber {
         return (short) val;
     }
 
-    @Override
-    public int hashCode() {
-        return 42; // bunu yapmayın !!
-    }
+
 
     @Override public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof PhoneNumber)) // RTTI - Run Time Type Identification
+        if (!(o instanceof PhoneNumber))
             return false;
-        PhoneNumber pn = (PhoneNumber)o; // downcasting
+        PhoneNumber pn = (PhoneNumber)o;
         return pn.lineNum == lineNum && pn.prefix == prefix
                 && pn.areaCode == areaCode;
     }
 
+
+
     public static void main(String[] args) {
 
-       // PhoneNumber.getCustomerPhoneNumbers();
 
         Map<PhoneNumber, String> m = new HashMap<>();
         m.put(new PhoneNumber(707, 867, 5309), "Jenny");

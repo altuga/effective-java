@@ -12,8 +12,8 @@ TODO
 */
 public class Combiner {
 
-    public static <T> Set  combine(Set<? extends T> s1, Set<? extends T> s2) {
-        Set<T> result = new HashSet<>(s1);
+    public static Set combine(Set s1, Set s2) {
+        Set result = new HashSet(s1);
         result.addAll(s2);
         return result;
     }
@@ -22,8 +22,7 @@ public class Combiner {
     public static void main(String[] args) {
         Set<String> guys = Set.of("Tom", "Dick", "Harry");
         Set<Integer> ages = Set.of(44, 34, 21);
-        Set<Double> agesDouble = Set.of(44.0, 34.0, 21.2);
-        Set<String> aflCio = combine(ages, agesDouble);
+        Set<String> aflCio = combine(guys, ages);
         System.out.println(aflCio);
     }
 }

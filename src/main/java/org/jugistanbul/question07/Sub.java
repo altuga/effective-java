@@ -21,7 +21,7 @@ import java.time.Instant;
 public final class Sub extends Super {
 
     // Blank final, set by constructor
-    private final Instant instant ;
+    private final Instant instant;
 
     Sub() {
         instant = Instant.now();

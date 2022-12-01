@@ -22,14 +22,15 @@ public class BondCalculation {
      */
     public BigDecimal calculateTimeValueOfMoney(BigDecimal m) {
 
+        /*
+        Should we check if m is null or not ? If Yes how ?
+         */
 
-
-        assert m!= null;
-
-        // ...
+        if (m.signum() <= 0)
+            throw new ArithmeticException("Money Input <= 0: " + m);
 
         // calculation
-        return m.add(new BigDecimal(1));
+        return new BigDecimal(1);
 
     }
 

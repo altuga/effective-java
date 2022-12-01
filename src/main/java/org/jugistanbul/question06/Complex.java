@@ -15,9 +15,8 @@ TODO:
  3 - Refactor and ask questions 
 */
 public final class Complex {
-     private final double re;
-     private final double im;
-
+    private final double re;
+    private final double im;
 
     private Complex(double re, double im) {
         this.re = re;

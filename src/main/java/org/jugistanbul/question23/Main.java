@@ -1,7 +1,5 @@
 package org.jugistanbul.question23;
 
-import static org.jugistanbul.question23.PrintedWork.STYLE_BOLD;
-
 
 /**
  * TODO
@@ -13,6 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         PrintedWork printedWork = new PrintedWork();
-        printedWork.applyStyles(STYLE_BOLD);
+        printedWork.applyStyles(PrintedWork.STYLE_BOLD);
     }
 }

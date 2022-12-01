@@ -11,12 +11,13 @@ TODO
 public class LordOfTheLoops {
 
     public static void exec(List<String> n, List<Integer> a) {
-
-        for ( Iterator<String> i = n.iterator();i.hasNext();) {
+        Iterator<String> i = n.iterator();
+        while (i.hasNext()) {
             System.out.println(" --> " + i.next() );
         }
 
-        for ( Iterator<Integer> i2 = a.iterator();i2.hasNext();) {
+        Iterator<Integer> i2 = a.iterator();
+        while (i.hasNext()) {
             System.out.println(" --> " + i2.next());
         }
     }

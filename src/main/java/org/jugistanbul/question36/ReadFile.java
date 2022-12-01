@@ -1,7 +1,6 @@
 package org.jugistanbul.question36;
 
 import java.io.*;
-import java.util.Optional;
 
 
 /**
@@ -23,13 +22,7 @@ public class ReadFile {
     private static final int BUFFER_SIZE = 8 * 1024;
 
 
-    /**
-     *
-     * @param src
-     * @param dst
-     * @return
-     */
-    static Optional<Boolean> copy(String src, String dst) {
+    static void copy(String src, String dst) throws IOException {
         try (InputStream in = new FileInputStream(src);
              OutputStream out = new FileOutputStream(dst)) {
 
@@ -39,18 +32,18 @@ public class ReadFile {
                 out.write(buf, 0, n);
             }
 
-            return Optional.of(true);
         } catch (IOException ex) {
             System.err.println(ex);
-            return Optional.empty();
+            throw ex;
         }
+
 
     }
 
     public static void main(String[] args) throws IOException{
         String src = "a.txt"; // always gives error
         String dst = "b.txt"; // always gives error
-        Optional<Boolean> result =  copy(src, dst);
-        result.ifPresent(System.out::println);
+        copy(src, dst);
+
     }
 }

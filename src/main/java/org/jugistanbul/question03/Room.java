@@ -8,7 +8,8 @@ package org.jugistanbul.question03;
  *
  */
 
-public class Room implements AutoCloseable{
+public class Room {
+
 
     int numJunkPiles; // Number of junk piles in this room
 
@@ -16,9 +17,4 @@ public class Room implements AutoCloseable{
         this.numJunkPiles = numJunkPiles;
     }
 
-    @Override
-    public void close()  {
-        System.out.println("Oda temizlendi");
-        this.numJunkPiles = 0 ;
-    }
 }

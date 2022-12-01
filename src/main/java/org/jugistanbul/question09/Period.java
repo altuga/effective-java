@@ -25,9 +25,8 @@ public final class Period {
         if (start.compareTo(end) > 0)
             throw new IllegalArgumentException(
                     start + " after " + end);
-
-        this.start = new Date(start.getTime()); // clone gibi
-        this.end = new Date(end.getTime()); // clone  gibi
+        this.start = start;
+        this.end = end;
 
     }
 

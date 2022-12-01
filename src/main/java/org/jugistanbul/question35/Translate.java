@@ -19,7 +19,6 @@ public class Translate {
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             // Ignore, we're done
-            //e.printStackTrace();
         }
         return result;
     }

@@ -3,29 +3,22 @@ package org.jugistanbul.question42;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Optional;
 
-/**
- * TODO:
- * - Throwing IOException is okay?
+/**TODO:
+        - Throwing IOException is okay?
  */
 public class Supply {
 
-    static Optional<String> firstLineOfFile(String path) {
+    static String firstLineOfFile(String path) throws IOException {
 
         try (BufferedReader br = new BufferedReader(new FileReader(path));) {
-            return Optional.of(br.readLine());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return Optional.empty();
+            return br.readLine();
         }
     }
 
-    public static void main(String[] args) {
-        String path = "a.txt";
-
+    public static void main(String[] args) throws IOException {
+        String path = args[0];
         System.out.println(firstLineOfFile(path));
-
     }
 
 }

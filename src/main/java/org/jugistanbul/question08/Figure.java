@@ -18,7 +18,7 @@ TODO:
  5 - Refactor and ask questions 
 */
 class Figure {
-    enum Shape { RECTANGLE, CIRCLE, SQUARE  };
+    enum Shape { RECTANGLE, CIRCLE  };
 
     // Tag field - the shape of this figure
     final Shape shape;
@@ -37,35 +37,26 @@ class Figure {
     }
 
     // Constructor for rectangle
-    Figure(double length,boolean isSquare) {
-        shape = Shape.SQUARE;
-        this.length = length;
-    }
-
-
-    // Constructor for rectangle
     Figure(double length, double width) {
         shape = Shape.RECTANGLE;
         this.length = length;
         this.width = width;
     }
 
-    double calculateArea() {
+    double area() {
         switch(shape) {
             case RECTANGLE:
                 return length * width;
             case CIRCLE:
                 return Math.PI * (radius * radius);
-            case SQUARE:
-                return length * length;
             default:
                 throw new AssertionError(shape);
         }
     }
 
     public static void main(String[] args) {
-        Figure figure = new Figure(3,false);
-        System.out.println(figure.calculateArea());
+        Figure figure = new Figure(3,4);
+        System.out.println(figure.area());
 
     }
 }

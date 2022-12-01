@@ -22,7 +22,6 @@ public class StockCalculation {
     private List<StockInfo> getStockInfo(Stream<String> symbols) {
         return symbols
                 .map(this::getStock) //slow network operation
-                .parallel()
                 .collect(toList());
     }
 
@@ -41,8 +40,6 @@ public class StockCalculation {
     }
 
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
-
         StockCalculation stockCalculation = new StockCalculation();
 
         List<String> stockNames = new ArrayList() ;
@@ -51,10 +48,6 @@ public class StockCalculation {
         }
         List<StockInfo>  stockInfos =  stockCalculation.getStockInfo(stockNames.stream());
         System.out.println(stockInfos);
-
-        long end = System.nanoTime();
-
-        System.out.println( (end- startTime) / 1_000_000_000   );
 
     }
 

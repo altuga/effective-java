@@ -36,8 +36,6 @@ public class NerfBasic {
         return Objects.hashCode(range * dartInRows);
     }
 
-
-
     @Override
     public String toString() {
         return "NerfBasic{" +

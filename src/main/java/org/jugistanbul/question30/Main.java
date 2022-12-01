@@ -15,10 +15,7 @@ public class Main {
         CheeseController shop = new CheeseController();
 
         List<Cheese> cheeses = shop.getCheeses();
-        // cheeses null gelmemeli, null object pattern uyguluyoruz:
-        assert (cheeses != null);
-
-        if (cheeses.contains(Cheese.Name.STILTON))
+        if (cheeses != null && cheeses.contains(Cheese.Name.STILTON))
             System.out.println("Jolly good, just the thing.");
 
     }

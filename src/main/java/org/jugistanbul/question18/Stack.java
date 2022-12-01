@@ -9,28 +9,28 @@ TODO
  2 - What is the lesson  ?
 */
 
-public class Stack<E> {
-    public E[] elements;
+public class Stack {
+    public Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
 
-    @SuppressWarnings("unchecked")
     public Stack() {
-        elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+        elements = new Object[DEFAULT_INITIAL_CAPACITY];
     }
 
-    public void push(E e) {
+    public void push(Object e) {
         ensureCapacity();
         elements[size++] = e;
     }
 
-    public E pop() {
+    public Object pop() {
         if (size == 0) {
             throw new EmptyStackException();
         }
 
-        E result = elements[--size];
+
+        Object result = elements[--size];
         elements[size] = null;
         return result;
     }
@@ -47,8 +47,8 @@ public class Stack<E> {
 
 
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<>();
-        stack.push("Hello"); // write 12 and run again
+        Stack stack = new Stack();
+        stack.push("hello"); // write 12 and run again
 
         String result = (String) stack.pop();
         System.out.println(result.toUpperCase());
