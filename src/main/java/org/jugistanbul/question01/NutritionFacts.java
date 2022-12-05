@@ -16,44 +16,41 @@ public class NutritionFacts {
 
     private int servingSize = 0; // must
     private int servings = 0; // must
-    private int calories = 0; // optional
     private int fat = 0;  // optional
     private int sodium = 0; // optional
     private int carbohydrate = 0; // optional
 
-    public NutritionFacts(int servingSize, int servings) {
-        this(servingSize, servings, 0);
+    // Setters
+    public void setServingSize(int val) {
+        servingSize = val;
     }
 
-    public NutritionFacts(int servingSize, int servings, int calories) {
-        this(servingSize, servings, calories, 0);
-    }
-
-    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
-        this(servingSize, servings, calories, fat, 0);
-    }
-
-    public NutritionFacts(int servingSize, int servings, int calories, int fat,
-                          int sodium) {
-        this(servingSize, servings, calories, fat, sodium, 0);
+    public void setServings(int val) {
+        servings = val;
     }
 
 
-    public NutritionFacts(int servingSize, int servings, int calories, int fat,
-                          int sodium, int carbohydrate) {
-        this.servingSize = servingSize;
-        this.servings = servings;
-        this.calories = calories;
-        this.fat = fat;
-        this.sodium = sodium;
-        this.carbohydrate = carbohydrate;
+
+    public void setFat(int val) {
+        fat = val;
+    }
+
+    public void setSodium(int val) {
+        sodium = val;
+    }
+
+    public void setCarbohydrate(int val) {
+        carbohydrate = val;
     }
 
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new NutritionFacts(240, 8, 100, 0, 35, 27);
 
+        NutritionFacts cocaCola = new NutritionFacts();
+        cocaCola.setServingSize(240);
+        cocaCola.setServings(8);
+        cocaCola.setSodium(35);
+        cocaCola.setCarbohydrate(27);
         System.out.println(cocaCola);
     }
-
 
 }
