@@ -43,7 +43,13 @@ public final class PhoneNumber {
                 && pn.areaCode == areaCode;
     }
 
-
+    @Override
+    public int hashCode() {
+        int result = areaCode;
+        result = 31 * result + (int) prefix;
+        result = 31 * result + (int) lineNum;
+        return result;
+    }
 
     public static void main(String[] args) {
 
