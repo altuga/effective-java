@@ -49,6 +49,9 @@ public final class Complex {
     }
 
     // TODO implement subtract
+    public Complex substract(Complex c) {
+        return new Complex(re - c.re, im - c.im);
+    }
 
 
     public Complex multiply(Complex c) {
