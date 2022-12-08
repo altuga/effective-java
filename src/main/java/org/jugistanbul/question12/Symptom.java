@@ -35,6 +35,11 @@ public class Symptom {
             for (Iterator<Card.Rank> j = ranks.iterator(); j.hasNext(); )
                 deck.add(new Card(i.next(), j.next()));
 
-        
+        for (Card.Suit suit:suits ) {
+            for(Card card:deck) {
+                System.out.println(" " + suits + " " ) ;
+            }
+
+        }
     }
 }
