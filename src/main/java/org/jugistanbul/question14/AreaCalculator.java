@@ -12,12 +12,18 @@ TODO
      C = speed of light (m/s) = 3.0x10^8 m/s
 */
 
+
+
 public class AreaCalculator {
 
 
 
     public static void main(String[] args) {
 
+        System.out.println(PhysicalConstants.PI.getValue());
 
     }
 }
+
+
+
